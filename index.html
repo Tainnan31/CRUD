@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <h1>Cadastro de Professores</h1>
+    <button id="adicionarProfessor" class="botao-adicionar">Adicionar</button>
+    <table class="tabela-professores">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Salário</th>
+                <th>Data de Admissão</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="listaProfessores">
+            
+        </tbody>
+    </table>
+
+    
+    <div id="modalProfessor" class="modal">
+        <div class="conteudo-modal">
+            <span class="fechar-modal" id="fecharModal">&times;</span>
+            <h2>Adicionar/Editar Professor</h2>
+            <form id="formularioProfessor">
+                <input type="hidden" id="idProfessor">
+                <div class="grupo-input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="salario">Salário:</label>
+                    <input type="number" id="salario" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="dataAdmissao">Data de Admissão:</label>
+                    <input type="date" id="dataAdmissao" required>
+                </div>
+                <button type="submit" id="salvarProfessor" class="botao-salvar">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
